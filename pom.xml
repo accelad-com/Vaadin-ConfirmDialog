@@ -11,7 +11,8 @@
     <properties>
         <!-- ZIP Manifest fields -->
         <Implementation-Version>${project.version}</Implementation-Version>
-        <vaadin.version>7.5.0</vaadin.version>
+        <vaadin.projectId>com.github.accelad-com.vaadin</vaadin.projectId>
+        <vaadin.version>bd68b37903</vaadin.version>
         <Implementation-Title>${project.name}</Implementation-Title>
         <Implementation-Vendor>Run Uilder</Implementation-Vendor>
         <Vaadin-License-Title>Apache License 2.0</Vaadin-License-Title>
@@ -20,18 +21,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.vaadin</groupId>
+            <groupId>${vaadin.projectId}</groupId>
             <artifactId>vaadin-server</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.vaadin</groupId>
+            <groupId>${vaadin.projectId}</groupId>
             <artifactId>vaadin-themes</artifactId>
             <version>${vaadin.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.vaadin</groupId>
+            <groupId>${vaadin.projectId}</groupId>
             <artifactId>vaadin-client-compiled</artifactId>
             <version>${vaadin.version}</version>
             <scope>test</scope>
@@ -200,6 +201,10 @@
         <repository>
             <id>vaadin-addons</id>
             <url>http://maven.vaadin.com/vaadin-addons</url>
+        </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 </project>
